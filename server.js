@@ -24,6 +24,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.get('/', (req, res) => {
+  res.json({ message: "Welcome to My Portfolio application" });
+});
 // root & api routes
 app.use('/', indexRouter);
 app.use('/api/contacts', contactsRouter);
